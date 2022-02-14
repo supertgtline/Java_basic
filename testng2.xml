@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Suite" thread-count = "2" parallel="tests">
+
+	<test name="Pixel XL">
+		<classes>
+			<class name="testNg.Test1" />
+		</classes>
+	</test>
+	<test name="Pixel XL 2">
+		<classes>
+			<class name="testNg.Test2" />
+		</classes>
+	</test>
+
+</suite> <!-- Suite -->
