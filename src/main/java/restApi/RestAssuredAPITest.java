@@ -22,17 +22,15 @@ public class RestAssuredAPITest {
             "  \"userId\": \"1\" \n}";
     @Test
     public void GetBooksDetails() {
-        RestAssured.baseURI = "https://flirb2cprod.b2clogin.com/flirb2cprod.onmicrosoft.com/oauth2/v2.0/token?p=B2C_1A_RayMarineROPC&response_type=token%20id_token&grant_type=password&client_id=6ad1fda7-90bb-4570-b2fb-cdc83f617964&scope=openid%206ad1fda7-90bb-4570-b2fb-cdc83f617964%20offline_access&username=sieutt%40nexlesoft.com&password=Sieu123%40";
+        RestAssured.baseURI = "https://flirb2cprod.b2clogin.com/flirb2cprod.onmicrosoft.com/oauth2/v2.0/token?p=B2C_1A_RayMarineROPC&response_type=token%20id_token&grant_type=password&client_id=6ad1fda7-90bb-4570-b2fb-cdc83f617964&scope=openid%206ad1fda7-90bb-4570-b2fb-cdc83f617964%20offline_access&username=thanhnd@nexlesoft.com&password=Thanh123@%40";
         Response response = given()
                 .header("Content-type", "application/json")
                 .and()
                 .body(requestBody)
                 .when()
-                .post("/posts")
+                .post()
                 .then()
                 .extract().response();
-
-        System.out.println(response.asString());
-        System.out.println(response.jsonPath().getString("body"));
+        System.out.println("abc");
     }
 }

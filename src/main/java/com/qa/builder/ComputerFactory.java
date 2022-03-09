@@ -1,17 +1,19 @@
 package com.qa.builder;
 
-public class ComputerFactory {
-    public Computer getComputer(String computer){
-        if(computer.equalsIgnoreCase("Laptop")){
+
+public class ComputerFactory extends AbstractFactory{
+
+
+    @Override
+    Computer getComputer(String computerType) {
+        if(computerType.equalsIgnoreCase("Laptop")){
             return new Laptop();
         }
-        else if(computer.equalsIgnoreCase("Phone")){
+        if(computerType.equalsIgnoreCase("Phone")){
             return new Phone();
-        }
-        else if(computer.equalsIgnoreCase("SmartTV")){
+        }        if(computerType.equalsIgnoreCase("SmartTv")){
             return new SmartTv();
         }
-
         return null;
     }
 }
